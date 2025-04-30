@@ -1,0 +1,10 @@
+fastapi
+uvicorn
+numpy
+opencv-python
+tensorflow
+keras
+mediapipe
+pydantic
+python-multipart
+gtts
