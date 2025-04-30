@@ -1,0 +1,163 @@
+/* TranslationDisplay.css */
+.translation-display {
+  background-color: var(--card-bg);
+  border-radius: 8px;
+  padding: 20px;
+  margin: 20px 0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.dark .translation-display {
+  background-color: var(--dark-card-bg);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.translation-display h3 {
+  margin-top: 0;
+  color: var(--heading-color);
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+}
+
+.translated-text {
+  font-size: 1.5rem;
+  margin: 10px 0;
+  line-height: 1.5;
+  min-height: 3rem;
+  padding: 10px;
+  border-radius: 4px;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.translation-loading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+.loading-dots {
+  display: flex;
+  gap: 6px;
+}
+
+.loading-dots span {
+  width: 10px;
+  height: 10px;
+  background-color: var(--primary-color);
+  border-radius: 50%;
+  animation: bounce 1.4s infinite ease-in-out both;
+}
+
+.loading-dots span:nth-child(1) {
+  animation-delay: -0.32s;
+}
+
+.loading-dots span:nth-child(2) {
+  animation-delay: -0.16s;
+}
+
+@keyframes bounce {
+  0%,
+  80%,
+  100% {
+    transform: scale(0);
+  }
+  40% {
+    transform: scale(1);
+  }
+}
+
+.ai-badge {
+  display: inline-flex;
+  align-items: center;
+  background-color: rgba(128, 90, 213, 0.1);
+  border-radius: 16px;
+  padding: 4px 12px;
+  margin-top: 10px;
+  font-size: 0.8rem;
+}
+
+.ai-icon {
+  margin-right: 5px;
+}
+
+.ai-confidence {
+  margin-left: 5px;
+  font-weight: bold;
+}
+
+.raw-translation {
+  margin-top: 10px;
+  font-style: italic;
+  opacity: 0.8;
+}
+
+.edit-btn {
+  background-color: var(--secondary-color);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 8px 16px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  margin-top: 10px;
+  transition: all 0.2s ease;
+}
+
+.edit-btn:hover {
+  background-color: var(--secondary-hover);
+  transform: translateY(-1px);
+}
+
+.editing-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.translation-editor {
+  width: 100%;
+  padding: 12px;
+  border: 2px solid var(--primary-color);
+  border-radius: 4px;
+  font-size: 1.2rem;
+  background-color: var(--input-bg);
+  color: var(--text-color);
+  resize: vertical;
+}
+
+.editing-controls {
+  display: flex;
+  gap: 10px;
+}
+
+.save-btn,
+.cancel-btn {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.save-btn {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+.save-btn:hover {
+  background-color: var(--primary-hover);
+}
+
+.cancel-btn {
+  background-color: var(--gray-color);
+  color: var(--text-color);
+}
+
+.cancel-btn:hover {
+  background-color: var(--gray-hover);
+}
